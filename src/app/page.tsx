@@ -1,95 +1,78 @@
-import Image from "next/image";
+// import Chart from '../component/Chart';
 import styles from "./page.module.css";
+import React from "react";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div>
+    <div className={styles.container}>
+      <h1>Dashboard</h1>
+      <div className={styles.widget}>
+          <h2>Sales Chart</h2>
+          {/* <Chart /> */}
+      </div>
+      <div className={styles.widgets}>
+        
+        <div className={styles.widget}>
+          <h2>Data Table</h2>
+          <table className={styles.sandeep}>
+            <thead>
+              <tr>
+                <th className={styles.sum} >Product</th>
+                <th className={styles.sum} >Sales</th>
+                <th className={styles.sum}>Revenue</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className={styles.td}>Product A</td>
+                <td className={styles.td}>100</td>
+                <td className={styles.td}>$1000</td>
+              </tr>
+              <tr>
+                <td className={styles.td} >Product B</td>
+                <td className={styles.td}>150</td>
+                <td className={styles.td}>$1500</td>
+              </tr>
+              <tr>
+                <td className={styles.td}>Company C</td>
+                <td className={styles.td}>150</td>
+                <td className={styles.td}>$1500</td>
+              </tr>
+              <tr>
+                <td className={styles.td} >Company D</td>
+                <td className={styles.td}>180</td>
+                <td className={styles.td}>$1800</td>
+              </tr>
+              <tr>
+                <td className={styles.td}>Company E</td>
+                <td className={styles.td}>170</td>
+                <td className={styles.td}>$1200</td>
+              </tr>
+              <tr>
+                <td className={styles.td}>Product C</td>
+                <td className={styles.td}>190</td>
+                <td className={styles.td}>$1900</td>
+              </tr>
+              <tr>
+                <td className={styles.td}>Product D</td>
+                <td className={styles.td}>170</td>
+                <td className={styles.td}>$15000</td>
+              </tr>
+              <tr>
+                <td className={styles.td}>Product S</td>
+                <td className={styles.td}>400</td>
+                <td className={styles.td}>$14000</td>
+              </tr>
+              
+            </tbody>
+          </table>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+    </div>
+      
+      
     </div>
   );
 }
